@@ -17,6 +17,11 @@
 		<nxparser.version>3.0.0-SNAPSHOT</nxparser.version>
 	</properties>
 
+	<scm>
+		<connection>scm:git:https://github.com/kaefer3000/ldbbc.git</connection>
+		<url>https://github.com/kaefer3000/ldbbc.git</url>
+	</scm>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.semanticweb.yars</groupId>
