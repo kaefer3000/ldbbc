@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.kit.aifb.ls3</groupId>
 	<artifactId>ldbbc</artifactId>
 	<description>A simple implementation of a Linked Data Platform Basic Container using Jax-RS and NxParser</description>
-	<version>0.0.6-SNAPSHOT</version>
+	<version>0.0.6</version>
 
 	<packaging>war</packaging>
 
@@ -20,7 +19,8 @@
 	<scm>
 		<connection>scm:git:https://github.com/kaefer3000/ldbbc.git</connection>
 		<url>https://github.com/kaefer3000/ldbbc.git</url>
-	</scm>
+	  <tag>0.0.6</tag>
+  </scm>
 
 	<dependencies>
 		<dependency>
@@ -101,7 +101,7 @@
 				<configuration>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 					<!-- To log HTTP requests on INFO level: -->
-					<requestLog implementation="org.eclipse.jetty.server.Slf4jRequestLog"></requestLog>
+					<requestLog implementation="org.eclipse.jetty.server.Slf4jRequestLog" />
 					<webApp>
 	     				<contextPath>/ldbbc</contextPath>
 					</webApp>
