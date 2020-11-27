@@ -4,7 +4,7 @@
 	<groupId>edu.kit.aifb.ls3</groupId>
 	<artifactId>ldbbc</artifactId>
 	<description>A simple implementation of a Linked Data Platform Basic Container using Jax-RS and NxParser</description>
-	<version>0.0.7-SNAPSHOT</version>
+	<version>0.0.7</version>
 
 	<packaging>war</packaging>
 
@@ -20,7 +20,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/kaefer3000/ldbbc.git</connection>
 		<url>https://github.com/kaefer3000/ldbbc.git</url>
-	  <tag>HEAD</tag>
+	  <tag>0.0.7</tag>
   </scm>
 
 	<dependencies>
@@ -107,7 +107,7 @@
 				<configuration>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 					<!-- To log HTTP requests on INFO level: -->
-					<requestLog implementation="org.eclipse.jetty.server.CustomRequestLog"></requestLog>
+					<requestLog implementation="org.eclipse.jetty.server.CustomRequestLog" />
 					<webApp>
 	     				<contextPath>/ldbbc</contextPath>
 					</webApp>
