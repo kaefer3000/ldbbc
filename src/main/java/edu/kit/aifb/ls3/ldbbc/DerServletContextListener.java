@@ -6,13 +6,13 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
-import javax.servlet.FilterRegistration;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.ServletRegistration;
-import javax.servlet.annotation.WebListener;
-import javax.ws.rs.HttpMethod;
+import jakarta.servlet.FilterRegistration;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.ServletRegistration;
+import jakarta.servlet.annotation.WebListener;
+import jakarta.ws.rs.HttpMethod;
 
 import org.semanticweb.yars.nx.Nodes;
 
@@ -55,6 +55,8 @@ public class DerServletContextListener implements ServletContextListener {
 		sr.setInitParameter(org.glassfish.jersey.server.ServerProperties.PROVIDER_PACKAGES,
 				this.getClass().getPackage().getName() + ","
 						+ org.semanticweb.yars.jaxrs.JerseyAutoDiscoverable.class.getPackage().getName());
+		sr.setInitParameter(org.glassfish.jersey.server.ServerProperties.WADL_FEATURE_DISABLE,
+				Boolean.TRUE.toString());
 
 		FilterRegistration fr;
 		// Register and configure filter to handle CORS requests
