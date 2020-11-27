@@ -107,11 +107,7 @@
 				<configuration>
 					<scanIntervalSeconds>3</scanIntervalSeconds>
 					<!-- To log HTTP requests on INFO level: -->
-<<<<<<< Updated upstream
-					<requestLog implementation="org.eclipse.jetty.server.Slf4jRequestLog" />
-=======
 					<requestLog implementation="org.eclipse.jetty.server.CustomRequestLog"></requestLog>
->>>>>>> Stashed changes
 					<webApp>
 	     				<contextPath>/ldbbc</contextPath>
 					</webApp>
